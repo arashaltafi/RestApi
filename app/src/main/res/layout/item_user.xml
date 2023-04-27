@@ -4,36 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="60dp">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageViewAvatar"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivAvatar"
         android:layout_width="60dp"
-        android:layout_height="0dp"
+        android:layout_height="60dp"
         android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewUserName"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="0dp"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="MindOrks" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewUserEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textViewUserName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUserName"
-        tools:text="MindOrks" />
+        tools:text="username" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
