@@ -7,6 +7,7 @@ import com.arash.altafi.fastnetwork.databinding.ActivityMainBinding
 import com.arash.altafi.fastnetwork.fastNetwork.FastNetworkActivity
 import com.arash.altafi.fastnetwork.okHttp.OkHttpActivity
 import com.arash.altafi.fastnetwork.retrofit.RetrofitActivity
+import com.arash.altafi.fastnetwork.volley.VolleyActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         btnRetrofit.setOnClickListener {
             startActivity(Intent(this@MainActivity, RetrofitActivity::class.java))
+        }
+
+        btnVolley.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VolleyActivity::class.java))
         }
     }
 

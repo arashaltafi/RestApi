@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastNetwork">
         <activity
+            android:name=".volley.VolleyActivity"
+            android:exported="false" />
+        <activity
             android:name=".retrofit.RetrofitActivity"
             android:exported="false" />
         <activity
